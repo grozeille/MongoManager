@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6FF36231-7E78-41B7-B7CC-5344B9D74AC0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MongoManager</RootNamespace>
+    <AssemblyName>MongoManager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging">
+      <HintPath>..\packages\Common.Logging.2.0.0\lib\2.0\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net">
+      <HintPath>..\packages\Common.Logging.Log4Net.2.0.1\lib\net20\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\mongocsharpdriver.1.6\lib\net35\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\mongocsharpdriver.1.6\lib\net35\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddClusterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClusterForm.Designer.cs">
+      <DependentUpon>AddClusterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddServerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddServerForm.Designer.cs">
+      <DependentUpon>AddServerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Cluster.cs" />
+    <Compile Include="Model\ClusterReplSet.cs" />
+    <Compile Include="Model\ClusterShard.cs" />
+    <Compile Include="Model\ClusterInstance.cs" />
+    <Compile Include="Model\IClusterMember.cs" />
+    <Compile Include="Model\Server.cs" />
+    <Compile Include="Model\ServiceAccountType.cs" />
+    <Compile Include="Model\ServiceStartupType.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ServerUserControl.Designer.cs">
+      <DependentUpon>ServerUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlInstance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlInstance.Designer.cs">
+      <DependentUpon>UserControlInstance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlChooseServerPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlChooseServerPage.Designer.cs">
+      <DependentUpon>UserControlChooseServerPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlClusterTypePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlClusterTypePage.Designer.cs">
+      <DependentUpon>UserControlClusterTypePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlReplicatSet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlReplicatSet.Designer.cs">
+      <DependentUpon>UserControlReplicatSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSharding.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSharding.Designer.cs">
+      <DependentUpon>UserControlSharding.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddClusterForm.resx">
+      <DependentUpon>AddClusterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddServerForm.resx">
+      <DependentUpon>AddServerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ServerUserControl.resx">
+      <DependentUpon>ServerUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlChooseServerPage.resx">
+      <DependentUpon>UserControlChooseServerPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlClusterTypePage.resx">
+      <DependentUpon>UserControlClusterTypePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlInstance.resx">
+      <DependentUpon>UserControlInstance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlReplicatSet.resx">
+      <DependentUpon>UserControlReplicatSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSharding.resx">
+      <DependentUpon>UserControlSharding.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
