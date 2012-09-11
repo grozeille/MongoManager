@@ -1,6 +1,6 @@
 ﻿namespace MongoManager
 {
-    partial class UserControlInstance
+    partial class UserControlNewInstance
     {
         /// <summary> 
         /// Required designer variable.
@@ -90,7 +90,7 @@
             // 
             // maskedTextBoxPassword
             // 
-            this.maskedTextBoxPassword.Location = new System.Drawing.Point(665, 11);
+            this.maskedTextBoxPassword.Location = new System.Drawing.Point(665, 10);
             this.maskedTextBoxPassword.Name = "maskedTextBoxPassword";
             this.maskedTextBoxPassword.Size = new System.Drawing.Size(121, 20);
             this.maskedTextBoxPassword.TabIndex = 5;
@@ -104,7 +104,7 @@
             "Automatic",
             "Manual",
             "Disable"});
-            this.comboBoxStartupType.Location = new System.Drawing.Point(792, 11);
+            this.comboBoxStartupType.Location = new System.Drawing.Point(792, 10);
             this.comboBoxStartupType.Name = "comboBoxStartupType";
             this.comboBoxStartupType.Size = new System.Drawing.Size(121, 21);
             this.comboBoxStartupType.TabIndex = 6;

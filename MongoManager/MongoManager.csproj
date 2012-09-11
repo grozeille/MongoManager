@@ -67,6 +67,18 @@
     <Compile Include="AddClusterForm.Designer.cs">
       <DependentUpon>AddClusterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlAddServerPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlAddServerPage.Designer.cs">
+      <DependentUpon>UserControlAddServerPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetectClusterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetectClusterForm.Designer.cs">
+      <DependentUpon>DetectClusterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,17 +101,29 @@
     <Compile Include="Model\ServiceStartupType.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServerUserControl.cs">
+    <Compile Include="UserControlCluster.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ServerUserControl.Designer.cs">
-      <DependentUpon>ServerUserControl.cs</DependentUpon>
+    <Compile Include="UserControlCluster.Designer.cs">
+      <DependentUpon>UserControlCluster.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlInstance.cs">
+    <Compile Include="UserControlMongod.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlInstance.Designer.cs">
-      <DependentUpon>UserControlInstance.cs</DependentUpon>
+    <Compile Include="UserControlMongod.Designer.cs">
+      <DependentUpon>UserControlMongod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlServer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlServer.Designer.cs">
+      <DependentUpon>UserControlServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlNewInstance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlNewInstance.Designer.cs">
+      <DependentUpon>UserControlNewInstance.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlChooseServerPage.cs">
       <SubType>UserControl</SubType>
@@ -113,23 +137,27 @@
     <Compile Include="UserControlClusterTypePage.Designer.cs">
       <DependentUpon>UserControlClusterTypePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlReplicatSet.cs">
+    <Compile Include="UserControlNewReplicatSet.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlReplicatSet.Designer.cs">
-      <DependentUpon>UserControlReplicatSet.cs</DependentUpon>
+    <Compile Include="UserControlNewReplicatSet.Designer.cs">
+      <DependentUpon>UserControlNewReplicatSet.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControlSharding.cs">
+    <Compile Include="UserControlNewSharding.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControlSharding.Designer.cs">
-      <DependentUpon>UserControlSharding.cs</DependentUpon>
+    <Compile Include="UserControlNewSharding.Designer.cs">
+      <DependentUpon>UserControlNewSharding.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\QueryViewItem.cs" />
     <EmbeddedResource Include="AddClusterForm.resx">
       <DependentUpon>AddClusterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddServerForm.resx">
       <DependentUpon>AddServerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlAddServerPage.resx">
+      <DependentUpon>UserControlAddServerPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
@@ -143,8 +171,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ServerUserControl.resx">
-      <DependentUpon>ServerUserControl.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlCluster.resx">
+      <DependentUpon>UserControlCluster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlMongod.resx">
+      <DependentUpon>UserControlMongod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlServer.resx">
+      <DependentUpon>UserControlServer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlChooseServerPage.resx">
       <DependentUpon>UserControlChooseServerPage.cs</DependentUpon>
@@ -152,16 +186,17 @@
     <EmbeddedResource Include="UserControlClusterTypePage.resx">
       <DependentUpon>UserControlClusterTypePage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlInstance.resx">
-      <DependentUpon>UserControlInstance.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlNewInstance.resx">
+      <DependentUpon>UserControlNewInstance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlReplicatSet.resx">
-      <DependentUpon>UserControlReplicatSet.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlNewReplicatSet.resx">
+      <DependentUpon>UserControlNewReplicatSet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControlSharding.resx">
-      <DependentUpon>UserControlSharding.cs</DependentUpon>
+    <EmbeddedResource Include="UserControlNewSharding.resx">
+      <DependentUpon>UserControlNewSharding.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\MongoManager.ViewModel.QueryViewItem.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -24,7 +24,7 @@ namespace MongoManager
             var addServerForm = new AddServerForm();
             if (addServerForm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                this.AddServer(addServerForm.Hostname, addServerForm.Login, addServerForm.Password);
+                //this.AddServer(addServerForm.Hostname, addServerForm.Login, addServerForm.Password);
             }
         }
 

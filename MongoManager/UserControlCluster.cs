@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace MongoManager
 {
-    public partial class UserControlReplicatSet : UserControl
+    public partial class UserControlCluster : UserControl
     {
-        public UserControlReplicatSet()
+        public UserControlCluster()
         {
             InitializeComponent();
         }

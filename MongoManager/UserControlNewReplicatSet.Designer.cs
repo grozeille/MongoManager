@@ -1,6 +1,6 @@
 ﻿namespace MongoManager
 {
-    partial class UserControlSharding
+    partial class UserControlNewReplicatSet
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,17 +30,16 @@
         {
             this.SuspendLayout();
             // 
-            // UserControlSharding
+            // UserControlReplicatSet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UserControlSharding";
-            this.Size = new System.Drawing.Size(992, 358);
+            this.Name = "UserControlReplicatSet";
+            this.Size = new System.Drawing.Size(825, 150);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
     }
 }

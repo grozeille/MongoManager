@@ -1,24 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
 namespace MongoManager
 {
-    public partial class AddServerForm : Form
+    public partial class UserControlNewInstance : UserControl
     {
-        public AddServerForm()
+        public UserControlNewInstance()
         {
             InitializeComponent();
-        }
-
-
-        private void buttonOK_Click(object sender, EventArgs e)
-        {
         }
     }
 }

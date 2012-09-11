@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace MongoManager
 {
-    public partial class UserControlSharding : UserControl
+    public partial class UserControlAddServerPage : UserControl
     {
-        public UserControlSharding()
+        public UserControlAddServerPage()
         {
             InitializeComponent();
         }

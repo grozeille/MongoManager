@@ -9,16 +9,11 @@ using System.Windows.Forms;
 
 namespace MongoManager
 {
-    public partial class AddServerForm : Form
+    public partial class DetectClusterForm : Form
     {
-        public AddServerForm()
+        public DetectClusterForm()
         {
             InitializeComponent();
-        }
-
-
-        private void buttonOK_Click(object sender, EventArgs e)
-        {
         }
     }
 }
